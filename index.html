@@ -2,51 +2,82 @@
 <html lang="en">
 
 <head>
+    <meta charset="utf-8" />
+    <meta name="author" content="www.frebsite.nl" />
+    <meta content="user-scalable=yes" name="viewport" />
+    <meta name="robots" content="noindex, nofollow" />
+
     <meta charset="UTF-8">
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="bower_components/jQuery.mmenu/dist/core/js/jquery.mmenu.min.js" type="text/javascript"></script>
-    <link href="bower_components/jQuery.mmenu/dist/core/css/jquery.mmenu.css" type="text/css" rel="stylesheet" />
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="menu.css">
+    <link href='https://fonts.googleapis.com/css?family=Lobster&subset=cyrillic' rel='stylesheet' type='text/css'>
+
     <title>intel</title>
 
+    <style>
+        .content h1 {
+            color: white;
+            font-family: 'Lobster', cursive;
+        }
+        
+        .content {
+            text-align: center;
+            height: 100%;
+        }
+        
+        .content h1 {
+            font-size: 50px;
+            margin: auto;
+            line-height: 1100%;
+            vertical-align: middle;
+        }
+    </style>
 
 </head>
 
 <body>
-    <div>
-        <!-- the wrapper -->
-        <div id="my-header">
-            <nav id="my-menu">
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/about/">About us</a>
-                        <ul>
-                            <li><a href="/about/history/">History</a></li>
-                            <li><a href="/about/team/">The team</a></li>
-                            <li><a href="/about/address/">Our address</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="/contact/">Contact</a></li>
-                </ul>
-            </nav>
+    <div class="container">
+        <div id="sidebar">
+            <ul>
+                <div class="img-shadow">
+                    <img src="http://lorempixel.com/output/people-q-c-240-240-9.jpg" alt="I">
+                </div>
+                <div id="name">
+                    <li><a href="#">Василиса Пупкина</a></li>
+                </div>
+                <li><a href="#">Новости</a></li>
+                <li><a href="#">Наши работы</a></li>
+                <li><a href="#">О нас</a></li>
+                <li><a href="#">Контакты</a></li>
+            </ul>
         </div>
-        <div id="my-content">
-            <button id="my-btn"></button>
-        </div>
-        <div id="my-footer">
-
+        <div class="main-content">
+            <a href="#" data-toggle=".container" id="sidebar-toggle">
+                <span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span>
+            </a>
+            <div class="content">
+                <h1>Видео-студия школы Интеллектуал</h1>
+            </div>
         </div>
     </div>
 </body>
 
-<script type="text/javascript">
+<script>
     $(document).ready(function () {
-        $("#my-menu").mmenu();
-        var API = $("#my-menu").data("mmenu");
-        
-        $("#my-btn").click(function() {
-            API.open(); 
+        $("[data-toggle]").click(function () {
+            var toggle_el = $(this).data("toggle");
+            $(toggle_el).toggleClass("open-sidebar");
         });
-        
     });
 </script>
 
