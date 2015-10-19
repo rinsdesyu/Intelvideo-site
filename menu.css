@@ -117,7 +117,7 @@
         }
         
         .container {
-            background: url(http://lorempixel.com/output/abstract-q-g-1080-720-6.jpg) no-repeat center center scroll;
+            background: url(http://lorempixel.com/output/technics-q-c-1080-720-8.jpg) no-repeat center center scroll;
             -webkit-background-size: cover;
             -moz-background-size: cover;
             -o-background-size: cover;
@@ -125,5 +125,6 @@
         }
         
         #sidebar-toggle span {
+            color: white;
             font-size: 25px;
         }
