@@ -1,130 +1,143 @@
-        body,
-        html {
-            height: 100%;
-            margin: 0;
-            overflow: hidden;
-            font-family: helvetica;
-            font-weight: 100;
-        }
-        
-        .container {
-            position: relative;
-            height: 100%;
-            width: 100%;
-            left: 0;
-            -webkit-transition: left 0.4s ease-in-out;
-            -moz-transition: left 0.4s ease-in-out;
-            -ms-transition: left 0.4s ease-in-out;
-            -o-transition: left 0.4s ease-in-out;
-            transition: left 0.4s ease-in-out;
-        }
-        
-        .container.open-sidebar {
-            left: 240px;
-        }
-        
-        #sidebar {
-            position: absolute;
-            left: -240px;
-            background: #f2f2f2;
-            width: 240px;
-            height: 100%;
-            box-sizing: border-box;
-        }
-        
-        #sidebar ul {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-        }
-        
-        #sidebar ul li {
-            margin: 0;
-        }
-        
-        #sidebar ul li a {
-            padding: 15px 20px;
-            font-size: 16px;
-            font-weight: 100;
-            color: black;
-            text-decoration: none;
-            display: block;
-            -webkit-transition: background 0.1s ease-in-out;
-            -moz-transition: background 0.1s ease-in-out;
-            -ms-transition: background 0.1s ease-in-out;
-            -o-transition: background 0.1s ease-in-out;
-            transition: background 0.1s ease-in-out;
-        }
-        
-        #sidebar ul li:hover a {
-            background: rgba(0, 0, 255, 0.1);
-        }
-        
-        .main-content {
-            width: 100%;
-            height: 100%;
-            padding: 10px;
-            padding-top: 25px;
-            box-sizing: border-box;
-            -moz-box-sizing: border-box;
-            position: relative;
-        }
-        
-        .main-content .content {
-            box-sizing: border-box;
-            -moz-box-sizing: border-box;
-            padding-left: 60px;
-            width: 100%;
-        }
-        
-        .main-content .content h1 {
-            font-weight: 100;
-        }
-        
-        .main-content .content p {
-            width: 100%;
-            line-height: 160%;
-        }
-        
-        #name {
-            background: rgba(0, 0, 255, 0.54);
-        }
-        
-        #name a {
-            color: white !important;
-            text-align: center;
-            font-size: 20px !important;
-            font-style: bold;
-        }
-        
-        .img-shadow {
-            position: relative;
-            display: inline-block;
-        }
-        
-        .img-shadow::after {
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .4) inset;
-            content: "";
-        }
-        
-        .img-shadow>img {
-            vertical-align: top;
-        }
-        
-        .container {
-            background: url(http://lorempixel.com/output/technics-q-c-1080-720-8.jpg) no-repeat center center scroll;
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
-            background-size: cover;
-        }
-        
-        #sidebar-toggle span {
-            color: white;
-            font-size: 25px;
-        }
+.container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    -webkit-transition: left 0.4s ease-in-out;
+    -moz-transition: left 0.4s ease-in-out;
+    -ms-transition: left 0.4s ease-in-out;
+    -o-transition: left 0.4s ease-in-out;
+    transition: left 0.4s ease-in-out;
+}
+
+.container.open-sidebar {
+    left: 240px;
+}
+
+.sidedar-opened {
+    left: 0px !important;
+}
+
+.btn-opened{
+    left: 250px !important;
+}
+
+#sidebar {
+    position: fixed;
+    top: 0px;
+    left: -240px;
+    background: #f2f2f2;
+    width: 240px;
+    height: 100%;
+    box-sizing: border-box;
+    -webkit-transition: left 0.4s ease-in-out;
+    -moz-transition: left 0.4s ease-in-out;
+    -ms-transition: left 0.4s ease-in-out;
+    -o-transition: left 0.4s ease-in-out;
+    transition: left 0.4s ease-in-out;
+    z-index: 20;
+}
+
+#sidebar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#sidebar ul li {
+    margin: 0;
+}
+
+#sidebar ul li a {
+    padding: 15px 20px;
+    font-size: 16px;
+    font-weight: 100;
+    color: black;
+    text-decoration: none;
+    display: block;
+    -webkit-transition: background 0.1s ease-in-out;
+    -moz-transition: background 0.1s ease-in-out;
+    -ms-transition: background 0.1s ease-in-out;
+    -o-transition: background 0.1s ease-in-out;
+    transition: background 0.1s ease-in-out;
+}
+
+#sidebar ul li:hover a {
+    background: rgba(0, 0, 255, 0.1);
+}
+
+.main-content {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    padding-top: 25px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    position: relative;
+}
+
+.main-content .content {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    padding-left: 60px;
+    width: 100%;
+}
+
+.main-content .content h1 {
+    font-weight: 80;
+}
+
+#name {
+    background: rgba(0, 0, 255, 0.54);
+}
+
+#name a {
+    color: white !important;
+    text-align: center;
+    font-size: 20px !important;
+    font-style: bold;
+}
+
+.img-shadow {
+    position: relative;
+    display: inline-block;
+}
+
+.img-shadow::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .4) inset;
+    content: "";
+}
+
+.img-shadow img {
+    vertical-align: top;
+}
+
+body {
+    background: url(/img/item1.jpeg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#sidebar-toggle {
+    z-index: 10;
+    position: fixed;
+    top: 25px;
+    left: 25px;
+    -webkit-transition: left 0.4s ease-in-out;
+    -moz-transition: left 0.4s ease-in-out;
+    -ms-transition: left 0.4s ease-in-out;
+    -o-transition: left 0.4s ease-in-out;
+    transition: left 0.4s ease-in-out;
+}
+
+#sidebar-toggle span {
+    color: rgba(125, 125, 255, 1);
+    font-size: 25px;
+}
