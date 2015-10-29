@@ -1,18 +1,70 @@
 <!DOCTYPE html5>
-<html>
-<head>
-   <meta charset="utf-8" />
-   <link href='css/main.css' type="text/css" rel="stylesheet"/>
-   <title>Intelvideo nahui</title>
-</head>
-<body>
-<div class="navbar">
-    <div class="navbar-button"><a href="#">О нас</a></div>
-    <div class="navbar-button"><a href="#">Работы</a></div>
-    <div class="navbar-button"><a href="#">Интелновости</a></div>
-    <div class="navbar-button"><a href="#">Награды</a></div>
-</div>
+<html lang="en">
 
-hhhh
+<head>
+    <meta charset="utf-8" />
+    <link href='css/main.css' type="text/css" rel="stylesheet" />
+    <link rel="stylesheet" href="bower_components/Swiper/dist/css/swiper.min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <style>
+        .swiper-container {
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+        }
+        
+        .swiper-pagination {}
+    </style>
+
+    <title>Intelvideo nahui</title>
+</head>
+
+<body>
+
+    <!-- NAVBAR START -->
+    <div class="navbar">
+        <div class="navbar-button"><a href="#">О нас</a></div>
+        <div class="navbar-button"><a href="#">Работы</a></div>
+        <div class="navbar-button"><a href="#">Интелновости</a></div>
+        <div class="navbar-button"><a href="#">Награды</a></div>
+    </div>
+    <!-- NAVBAR END -->
+
+    <!-- SLIDER MAIN CONTAINER -->
+    <div class="swiper-container">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide" style="background-image: url(http://lorempixel.com/1280/720/cats);background-repeat:no-repeat;background-size: 100%;"></div>
+            <div class="swiper-slide" style="background-image: url(http://lorempixel.com/1280/720/city);background-repeat:no-repeat;background-size: 100%;"></div>
+            <div class="swiper-slide" style="background-image: url(http://lorempixel.com/1280/720/people);background-repeat:no-repeat;background-size: 100%;"></div>
+
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <script src="bower_components/Swiper/dist/js/swiper.min.js"></script>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+
+    <script>
+        var mySwiper = new Swiper('.swiper-container', {
+            // Optional parameters
+            direction: 'horizontal',
+            loop: true,
+
+            // If we need pagination
+            pagination: '.swiper-pagination',
+            autoplay: 10000,
+            paginationClickable: true,
+            paginationBulletRender: function (index, className) {
+                return '<span class="' + className + '"></span>';
+            }
+        })
+    </script>
+    <!-- SLIDER MAIN CONTAINER END -->
+    
+    <p>DIE MOTHERFUCKER DIE</p>
 </body>
+
 </html>
