@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>slider</title>
+    <link rel="stylesheet" href="bower_components/Swiper/dist/css/swiper.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        .swiper-container {
+            height: 500px;
+            width: 100%;
+        }
+        .swiper-pagination {
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Slider main container -->
+    <div class="swiper-container">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide" style="background-image: url(http://lorempixel.com/1280/720/cats);background-repeat:no-repeat;background-size: 100%;"></div>
+            <div class="swiper-slide" style="background-image: url(http://lorempixel.com/1280/720/city);background-repeat:no-repeat;background-size: 100%;"></div>
+            <div class="swiper-slide" style="background-image: url(http://lorempixel.com/1280/720/people);background-repeat:no-repeat;background-size: 100%;"></div>
+
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <script src="bower_components/Swiper/dist/js/swiper.min.js"></script>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+
+    <script>
+        var mySwiper = new Swiper('.swiper-container', {
+            // Optional parameters
+            direction: 'horizontal',
+            loop: true,
+
+            // If we need pagination
+            pagination: '.swiper-pagination',
+            autoplay: 10000,
+            paginationClickable: true,
+            paginationBulletRender: function (index, className) {
+                return '<span class="' + className + '"></span>';
+            }
+        })
+    </script>
+</body>
+
+</html>
