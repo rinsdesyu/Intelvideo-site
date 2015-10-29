@@ -13,10 +13,25 @@
         }
         
         .swiper-container {
-            height: 500px;
+            height: 30pc;
             width: 100%;
+            z-index: 1;
         }
-        .swiper-pagination {
+        
+        .swiper-slide h1 {
+            font-family: arial;
+            color: white;
+            background-color: rgba(0, 0, 0, .8);
+            display: inline-block;
+            padding: 7px;
+            position: absolute;
+            right: 10%;
+            bottom: 10%;
+            border: solid 1px black;
+        }
+        .swiper-wrapper {
+            height: 100%;
+            width: 100%;
         }
     </style>
 </head>
@@ -27,9 +42,13 @@
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
             <!-- Slides -->
-            <div class="swiper-slide" style="background-image: url(http://lorempixel.com/1280/720/cats);background-repeat:no-repeat;background-size: 100%;"></div>
-            <div class="swiper-slide" style="background-image: url(http://lorempixel.com/1280/720/city);background-repeat:no-repeat;background-size: 100%;"></div>
-            <div class="swiper-slide" style="background-image: url(http://lorempixel.com/1280/720/people);background-repeat:no-repeat;background-size: 100%;"></div>
+            <div class="swiper-slide" style="background-image: url(http://lorempixel.com/1280/720/cats);background-repeat:no-repeat;background-size: 100%;">
+                <h1 data-swiper-parallax="-500">Lalka Sasai want YOU to node.js</h1>
+            </div>
+            <div class="swiper-slide" style="background-image: url(http://lorempixel.com/1280/720/city);background-repeat:no-repeat;background-size: 100%;">
+                <h1 data-swiper-parallax="-500">AZAZA ZATRALLIROVAL'</h1></div>
+            <div class="swiper-slide" style="background-image: url(http://lorempixel.com/1280/720/people);background-repeat:no-repeat;background-size: 100%;">
+                <h1 data-swiper-parallax="-500">PHP OLOLO</h1></div>
 
         </div>
         <!-- If we need pagination -->
@@ -49,11 +68,10 @@
             pagination: '.swiper-pagination',
             autoplay: 10000,
             paginationClickable: true,
-            paginationBulletRender: function (index, className) {
-                return '<span class="' + className + '"></span>';
-            }
+            parallax: true,
         })
     </script>
+    <p>hhh</p>
 </body>
 
 </html>
