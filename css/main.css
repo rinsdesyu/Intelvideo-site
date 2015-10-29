@@ -5,7 +5,8 @@
 body {
     margin: 0;
     background-color: #222;
-    color: #fff; 
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
 }
 
 a {
@@ -30,7 +31,7 @@ a {
 }
 
 .navbar .navbar-button a {
-    font-family: sans-serif;
+    font-family: 'Open Sans', sans-serif;
     text-decoration: none;
 }
 
